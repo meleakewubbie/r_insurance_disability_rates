@@ -13,8 +13,8 @@ I did this with the command below:
 <code> table$pct_uninsured <- (table$ins_non / table$in_1934) * 100 <code> 
   
   
-5. Before creating my map I joined my spatial and tablular data to include geometry and neccessary statistics. 
-I did this with the command below: 
+<sub> 5. Before creating my map I joined my spatial and tablular data to include geometry and neccessary statistics. 
+I did this with the command below: <sub>
   
 <code> map_dat <- left_join(geo_dat, uninsured, by = c("GEOID", "NAME")) <code> 
   
