@@ -17,12 +17,9 @@ I did this with the command below:
   
 <code> map_dat <- left_join(geo_dat, uninsured, by = c("GEOID", "NAME")) </code> 
   
+6. Finally, I designed my own map to show health insurance and disability rates by county within the United States for adults between 19-35 in 2018 using the code below:
   
-6. Finally, I designed my own map to show health insurance and disability rates by county within the United States for adults between 19-35 in 2018 using the code below.
-  
-
-<code> 
-my_map <- tm_shape(map_dat) +
+<code> my_map <- tm_shape(map_dat) +
   tm_fill(col = "2018", style = "cont",
     title = "% of population", ) + # set legend title
   tm_borders(lwd = 0.3, alpha = 0.5) + # added borders with width of 0.3 and 50%
