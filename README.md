@@ -16,7 +16,7 @@ I did this with the command below:
 5. Before creating my map I joined my spatial and tablular data to include geometry and neccessary statistics. 
 I did this with the command below: 
   
-<code> map_dat <- left_join(geo_dat, uninsured, by = c(GEOID, NAME)) <code> 
+<code> map_dat <- left_join(geo_dat, uninsured, by = c("GEOID", "NAME")) <code> 
   
 7. I used the same process for finding the percent of 19 to 35 year olds who are disabled. 
   
