@@ -39,6 +39,7 @@ my_map <- tm_shape(map_dat) +
   state.borders # added the state.borders layer I created earlier 
 </code> 
 
+
 7. I used the same process for mapping the percent of 19 to 35 year olds who are disabled. 
   
 ![image](https://user-images.githubusercontent.com/77419851/209524890-9ae6d118-4b7b-4c5e-81b5-3d6e27fd45df.png) 
