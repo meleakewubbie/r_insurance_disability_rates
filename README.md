@@ -1,4 +1,4 @@
-# Using R to map insurance and disability rates by county within the United States for adults between 19-35 in 2018. 
+# Using R, I mapped insurance and disability rates by county within the United States for adults between 19-35 in 2018.
 
 
 1. I utilized R librarys such as tidyverse, sf, tmap, and tmaptools. 
