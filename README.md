@@ -19,17 +19,18 @@ I did this with the command below:
   
 6. Finally, I designed my own map to show health insurance and disability rates by county within the United States for adults between 19-35 in 2018 using the code below:
   
-<code> my_map <- tm_shape(map_dat) +
+<code> 
+my_map <- tm_shape(map_dat) +
   tm_fill(col = "2018", style = "cont",
     title = "% of population", ) + # set legend title
   tm_borders(lwd = 0.3, alpha = 0.5) + # added borders with width of 0.3 and 50%
   opacity
   tm_layout(
-    title = "Adults aged 19-35 without health insurance \n (American
+    title = "Adults aged 19-35 without health insurance by county\n (American
     Community Survey, 2018)", # "\n" inserted a line break
     title.size = 1.5, # bigger title
     title.fontfamily = "serif", # title font
-    main.title = "Example Map:", # added a title for the whole figure
+    main.title = "Meleake's Adjusted Map", # added a title for the whole figure
     main.title.fontface = "bold", # make this bold
     inner.margins = c(0.05, 0.05, 0.2, 0.2), # wider margin on top and right
     side
