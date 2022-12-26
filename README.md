@@ -1,23 +1,23 @@
-# Using R, I mapped insurance and disability rates by county within the United States for adults between 19-35 in 2018.
+# Mapping Insurance and Disability Rates for Adults in the United States
+1. Using R, I mapped insurance and disability rates by county within the United States for adults between 19-35 in 2018.
 
+2. I utilized R librarys such as tidyverse, sf, tmap, and tmaptools. 
 
-1. I utilized R librarys such as tidyverse, sf, tmap, and tmaptools. 
+3. I found spatial and tabular data collected by the American Community Survey from 2012, 2014, 2016, and 2018. The spatial data includes an outline of all the counties in the United States, while the tabular data includes statistics about health insurance and disability.
 
-2. I found spatial and tabular data collected by the American Community Survey from 2012, 2014, 2016, and 2018. The spatial data includes an outline of all the counties in the United States, while the tabular data includes statistics about health insurance and disability.
+4. I transformed population counts into a percentage, which is a more informative statistic in relation to my goal. 
 
-3. I transformed population counts into a percentage, which is a more informative statistic in relation to my goal. 
-
-4. To find the percentage of counties that have health insurance, I created a new column/variable for the percentage of 19 to 34-year-olds without health insurance. To do this, I divided the count of 19 to 34-year-olds with no health insurance (ins_non) by the total population aged 19-34 (in_1934) and multiplied by 100. I assigned the resulting vector of values to a new variable in 'table' called pct_uninsured.
+5. To find the percentage of counties that have health insurance, I created a new column/variable for the percentage of 19 to 34-year-olds without health insurance. To do this, I divided the count of 19 to 34-year-olds with no health insurance (ins_non) by the total population aged 19-34 (in_1934) and multiplied by 100. I assigned the resulting vector of values to a new variable in 'table' called pct_uninsured.
 I did this with the command below: 
 
 <code> table$pct_uninsured <- (table$ins_non / table$in_1934) * 100 </code> 
   
-5. Before creating my map, I joined my spatial and tablular data to include geometry and neccessary statistics. 
+6. Before creating my map, I joined my spatial and tablular data to include geometry and neccessary statistics. 
 I did this with the command below:
   
 <code> map_dat <- left_join(geo_dat, uninsured, by = c("GEOID", "NAME")) </code> 
   
-6. Finally, I designed my own map to show health insurance and disability rates by county within the United States for adults between 19-35 in 2018 using the code below:
+7. Finally, I designed my own map to show health insurance and disability rates by county within the United States for adults between 19-35 in 2018 using the code below:
   
 <code> 
 my_map <- tm_shape(map_dat) +
@@ -40,7 +40,7 @@ my_map <- tm_shape(map_dat) +
 </code> 
 
 
-7. I used the same process for mapping the percent of 19 to 35 year olds who are disabled in the United States in 2018. 
+8. I used the same process for mapping the percent of 19 to 35 year olds who are disabled in the United States in 2018. 
   
 ![image](https://user-images.githubusercontent.com/77419851/209524890-9ae6d118-4b7b-4c5e-81b5-3d6e27fd45df.png) 
   
