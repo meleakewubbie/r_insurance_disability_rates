@@ -3,7 +3,7 @@
 
 2. I utilized R librarys such as tidyverse, sf, tmap, and tmaptools. 
 
-3. I found spatial and tabular data collected by the American Community Survey from 2012, 2014, 2016, and 2018. The spatial data includes an outline of all the counties in the United States, while the tabular data includes statistics about health insurance and disability.
+3. I found spatial and tabular data collected by the American Community Survey from 2012, 2014, 2016, and 2018. The spatial data includes an outline of all the counties in the United States, while the tabular data includes various statistics. I chose to focus on health insurance and disability.
 
 4. I transformed population counts into a percentage, which is a more informative statistic in relation to my goal. 
 
