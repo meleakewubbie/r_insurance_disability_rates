@@ -1,5 +1,5 @@
-# Mapping Insurance and Disability Rates for Adults in the United States
-1. Using R, I mapped insurance and disability rates by county within the United States for adults between 19-35 in 2018.
+# Mapping Health Insurance and Disability Rates for Adults in the United States
+1. Using R, I mapped health insurance and disability rates by county within the United States for adults between 19-35 in 2018.
 
 2. I utilized R librarys such as tidyverse, sf, tmap, and tmaptools. 
 
