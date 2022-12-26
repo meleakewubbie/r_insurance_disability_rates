@@ -17,7 +17,7 @@ I did this with the command below:
   
 <code> map_dat <- left_join(geo_dat, uninsured, by = c("GEOID", "NAME")) </code> 
   
-7. Finally, I designed my own map to show health insurance and disability rates by county within the United States for adults between 19-35 in 2018 using the code below:
+7. Finally, I designed my own map to show health insurance and disability rates by county within the United States for adults between 19-35 in 2018 using the command below:
   
 <code> 
 my_map <- tm_shape(map_dat) +
@@ -40,7 +40,7 @@ my_map <- tm_shape(map_dat) +
 </code> 
 
 
-8. I used the same process for mapping the percent of 19 to 35 year olds who are disabled in the United States in 2018. 
+8. I used the same process for mapping the percentage of 19 to 35 year olds who are disabled in the United States in 2018. 
   
 ![image](https://user-images.githubusercontent.com/77419851/209524890-9ae6d118-4b7b-4c5e-81b5-3d6e27fd45df.png) 
   
