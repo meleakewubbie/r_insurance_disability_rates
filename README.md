@@ -1,9 +1,9 @@
-# Using R to map insurance and disability rates by county within the United States for adults between 19-35. 
+# Using R to map insurance and disability rates by county within the United States for adults between 19-35 in 2018. 
 
 
 1. I utilized R librarys such as tidyverse, sf, tmap, and tmaptools. 
 
-2. I found spatial and tabluar data collected by the American Community Survery from 2012, 2014, 2016, and 2018. The spatial data has an outline of all the counties in the United States. The tabular data includes statistics about health insurance and disability. 
+2. I found spatial and tabluar data collected by the American Community Survery from 2018. The spatial data has an outline of all the counties in the United States. The tabular data includes statistics about health insurance and disability. 
 
 3. I transformed population counts into a percentage, which is a more informative statistic in relation to my goal. 
 
@@ -17,10 +17,31 @@ I did this with the command below:
   
 <code> map_dat <- left_join(geo_dat, uninsured, by = c("GEOID", "NAME")) </code> 
   
-7. I used the same process for finding the percent of 19 to 35 year olds who are disabled. 
+  
+6. Finally, I designed my own map to show health insurance and disability rates by county within the United States for adults between 19-35 in 2018 using the code below.
   
 
-  
+<code> 
+my_map <- tm_shape(map_dat) +
+  tm_fill(col = "2018", style = "cont",
+    title = "% of population", ) + # set legend title
+  tm_borders(lwd = 0.3, alpha = 0.5) + # added borders with width of 0.3 and 50%
+  opacity
+  tm_layout(
+    title = "Adults aged 19-35 without health insurance \n (American
+    Community Survey, 2018)", # "\n" inserted a line break
+    title.size = 1.5, # bigger title
+    title.fontfamily = "serif", # title font
+    main.title = "Example Map:", # added a title for the whole figure
+    main.title.fontface = "bold", # make this bold
+    inner.margins = c(0.05, 0.05, 0.2, 0.2), # wider margin on top and right
+    side
+    legend.position = c(0.8, 0.05), # x and y coordinates for legend
+  ) +
+  state.borders # added the state.borders layer I created earlier 
+</code> 
+
+7. I used the same process for mapping the percent of 19 to 35 year olds who are disabled. 
   
 ![image](https://user-images.githubusercontent.com/77419851/209524890-9ae6d118-4b7b-4c5e-81b5-3d6e27fd45df.png) 
   
