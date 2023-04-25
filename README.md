@@ -5,7 +5,7 @@
 
 3. I found spatial and tabular data collected by the American Community Survey from 2012, 2014, 2016, and 2018. The spatial data includes an outline of all the counties in the United States, while the tabular data includes various statistics. I chose to focus on health insurance and disability.
 
-4. I transformed population counts into a percentage, which is a more informative statistic in relation to my goal. 
+4. I transformed population counts into percentages, which is a more informative statistic in relation to my goal. 
 
 5. To find the percentage of counties that have health insurance, I created a new column/variable for the percentage of 19 to 34-year-olds without health insurance. To do this, I divided the count of 19 to 34-year-olds with no health insurance (ins_non) by the total population aged 19-34 (in_1934) and multiplied by 100. I assigned the resulting vector of values to a new variable in 'table' called pct_uninsured.
 I did this with the command below: 
